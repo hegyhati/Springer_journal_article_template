@@ -1,0 +1,16 @@
+name: Build final document
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hegyhati/diploma-latex:latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo 'Compiling LaTeX document...'
+      - run: make 
+      - run: echo 'Storing artifact...'
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Final document
+          path: manuscript.pdf
