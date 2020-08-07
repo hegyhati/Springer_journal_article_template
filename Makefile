@@ -1,6 +1,6 @@
 TEX = pdflatex -interaction nonstopmode
 BIB = bibtex
-DOCKERIMAGE = hegyhati/diploma-latex:latest
+DOCKERIMAGE = hegyhati/journal-latex:latest
 
 
 MAINDOCUMENT = manuscript

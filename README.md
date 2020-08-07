@@ -16,6 +16,7 @@ File/Directory  |  Purpose
 ----|----
 [`Makefile`](Makefile)  |  Simple makefile to build the project
 [`.gitignore`](.gitignore) | Typical LaTeX gitignore
+[`Docker/Dockerfile`](Docker/Dockerfile) | Dockerfile for the `hegyhati/journal-latex` image
 [`.github/workflows`](.github/workflows/) | [GitHub Actions workflow](https://github.com/hegyhati/Springer_journal_article_template/actions) configuration files
 
 # Compiling the manuscript
@@ -35,7 +36,7 @@ In order to have the necessary commands executed my `make`, several packages nee
 
 If you don't want to install these packages on your host system, but have `docker`, simply mount this directory into a container and do it there:
 ```
-docker run --rm -v ${PWD}:/project -w /project hegyhati/diploma-latex:latest make
+docker run --rm -v ${PWD}:/project -w /project hegyhati/journal-latex:latest make
 ```
 You can similarly run `make clean` as well, although it only uses `rm` so there isn't much reason to do so.
 

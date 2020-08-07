@@ -4,7 +4,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: hegyhati/diploma-latex:latest
+    container: hegyhati/journal-latex:latest
     steps:
       - uses: actions/checkout@v2
       - run: echo 'Compiling LaTeX document...'
